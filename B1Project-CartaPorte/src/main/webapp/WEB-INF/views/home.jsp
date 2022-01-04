@@ -30,9 +30,7 @@
                 <a href="" class="k-button">Subir</a>
             </div>
         </div>
-
 </div>
-
    <script>
         $(document).ready(function(){
             $("#login").kendoForm({
