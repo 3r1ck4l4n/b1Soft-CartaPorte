@@ -12,5 +12,8 @@
 </head>
 <body>
 
+<h1> Welcome!</h1>
+
+<img src="${pageContext.request.contextPath}/public/images/TierraAereo.png">
 </body>
 </html>
