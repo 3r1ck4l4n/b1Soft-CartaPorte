@@ -13,7 +13,7 @@
 
 </head>
 <body>
-<form:form path="" action="/B1Project_CartaPorte_war/validarFormulario" method="get">
+<form:form path="" action="validarFormulario" method="get">
 
     <input type="text">
     <button type="submit"> Enviar</button>
