@@ -1,12 +1,11 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: yeder
-  Date: 04/01/2022
-  Time: 10:07 a. m.
-  To change this template use File | Settings | File Templates.
+<%-- 
+    Document   : recuver
+    Created on : 4 ene 2022, 11:58:37
+    Author     : guapo_mfkjs57
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -29,11 +28,9 @@
                     height="150"></img>
                 </div>
                 <div id='banner'>
-                    Carta porte 
+                    Recuperar contraseña 
                 </div>
-                <div id="account">
-                    ¿No tienes una cuenta? <a href="signup.html">Regristrate</a>
-                </div>
+                
             </div>
             <div id="inputs-wrapper">
                 <form id="login"></form>
@@ -64,21 +61,6 @@
                         attributes:{
                             placeholder: "Email",
                             required:true
-                        }
-                    }, 
-                    {
-                        field: "Password",
-                        label:"",
-                        attributes:{
-                            type:"password",
-                            required:true
-                        }
-                    },
-                    {
-                        field: "RememberMe",
-                        label:"Remember Me",
-                        attributes:{
-                            type:"checkbox"
                         }
                     }
                 ]
