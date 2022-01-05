@@ -36,4 +36,20 @@ public class MainController {
         return "validar";
 
     }
+    
+    @RequestMapping("/RecuperarContraseña")
+    public String recuverRoute(){
+
+        System.out.println("AQUI*************************");
+        return "recuver";
+
+    }
+    
+    @RequestMapping("/CambiarContraseña")
+    public String ChangePasswordRoute(){
+
+        System.out.println("AQUI*************************");
+        return "password";
+
+    }
 }
