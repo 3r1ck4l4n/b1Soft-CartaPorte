@@ -10,21 +10,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/Login.css">
+    <title>Forgotpassword</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}public/css/kendo.default.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}public/css/font.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}public/css/stylelog.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2021.3.1109/js/jszip.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2021.3.1109/js/kendo.all.min.js"></script>
+    <script src="${pageContext.request.contextPath}public/js/jquery-1.12.3.min.js"></script>
+    <script src="${pageContext.request.contextPath}public/js/jszip.min.js"></script>
+    <script src="${pageContext.request.contextPath}public/js/kendo.all.min.js"></script>
 </head>
 <body>
 <div id="sign-in-page">
         <div id="sign-in-wrapper">
             <div id="logo-wrapper">
                 <div id="logo">
-                    <img src="image/TierraAereo.png" width="200"
+                    <img src="${pageContext.request.contextPath}public/images/TierraAereo.png" width="200"
                     height="150"></img>
                 </div>
                 <div id='banner'>

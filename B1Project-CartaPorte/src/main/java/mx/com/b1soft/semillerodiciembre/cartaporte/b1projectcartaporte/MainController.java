@@ -9,7 +9,7 @@ public class MainController {
     public String firstRoute(){
 
         System.out.println("AQUI*************************");
-        return "home";
+        return "login";
 
     }
 
@@ -20,6 +20,13 @@ public class MainController {
         return "login";
 
     }
+    
+    @RequestMapping("/guia")
+    public String guiaRoute(){
+
+        System.out.println("AQUI*************************");
+        return "guia";
+    }
 
     @RequestMapping("/register")
     public String registerRoute(){
@@ -29,7 +36,7 @@ public class MainController {
 
     }
 
-    @RequestMapping("/validarFormulario")
+    @RequestMapping("/validate")
     public String validarRoute(){
 
         System.out.println("AQUI*************************");
@@ -37,7 +44,7 @@ public class MainController {
 
     }
     
-    @RequestMapping("/RecuperarContraseña")
+    @RequestMapping("/recuverpassword")
     public String recuverRoute(){
 
         System.out.println("AQUI*************************");
@@ -45,7 +52,7 @@ public class MainController {
 
     }
     
-    @RequestMapping("/CambiarContraseña")
+    @RequestMapping("/changepassword")
     public String ChangePasswordRoute(){
 
         System.out.println("AQUI*************************");

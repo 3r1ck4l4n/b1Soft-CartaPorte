@@ -1,4 +1,4 @@
-    body{
+     body {
         margin: 0;
         font-family: Roboto;
         font-style: normal;
@@ -15,26 +15,24 @@
         right: 5px;
         width: 24px;
         height: 24px;
-        color:gray;
+        color:rgb(73, 28, 197);
     }
     #logo-wrapper{
-        height: 370px;
-        width: 500px;
+        margin-top:0px;  
     }
-
     #logo {
-        height: 186px;
-        width: 270px;
+        display: flex;
+        justify-content: center;
+        
     }
     #banner {
-        height: 68px;
+        height: 170px;
         color:#2727BE;
         font-weight: 300;
         font-size: 70px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top:3px;
     }
     #account{
         position: relative;
@@ -49,11 +47,26 @@
         color:#0058E9;
     }
 
+    #forgot{
+        height: 20px;
+        margin:20px 0px 20px 0px;
+        font-size: 18px;
+    }
+
+    #forgot>a {
+        margin-left: 10px;
+        color:#0058E9;
+    }
+
     #sign-in-page {
         position: relative;
         height: 100vh;
         display: flex;
         background: linear-gradient(50deg, #070B46 45%, #2D2DD3 100%);
+    }
+    #push{
+        display: flex;
+        justify-content: center;
     }
     
     #sign-in-wrapper {
@@ -69,12 +82,13 @@
     }
 
     #login {
-        height: 200px;
-        width: 280px;
-        justify-content: space-between;
+        height: 202px;
+        width: 270px;
         display: flex;
         flex-flow: column;
-
+    }
+    #signup{
+        display: flex;
     }
     div.k-form-field:nth-child(3) {
         display: flex;
@@ -87,30 +101,19 @@
         position: relative;
     }
 
-    .k-button, .k-button:hover {
+    .k-button{
         height: 42px;
         width: 270px;
         background:#FF6358;
         color: #FFFFFF;
-
     }
-    #social-wrapper {
-        display: flex;
-        width:194px;
-        height:30px; 
-        top:755px;
-        left:183px; 
-        
+    .k-button:hover{
+        height: 42px;
+        width: 270px;
+        background:#fa7f76;
+        color: #FFFFFF;
     }
-
-    #image-wrapper {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        overflow: hidden;
-        width: 61%;
-    }
-
+    
     #image-wrapper img {
         width: 100%;
     }
