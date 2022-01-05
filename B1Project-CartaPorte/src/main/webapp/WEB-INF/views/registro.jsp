@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/style.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/css/style.css" />
     <title>Document</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
         <div id="Fuera">
             <div id="logo-wrapper">
                 <div id="logo">
-                    <img src="../public/images/TierraAereo.png" width="200"
+                    <img src="${pageContext.request.contextPath}/public/images/TierraAereo.png" width="200"
                     height="150"></img>
                     <span id="banner">Registro</span><br>
                 </div>
@@ -26,9 +26,9 @@
                  Nombre(s): &nbsp &nbsp<input type="text" id = "nombre"> <br/><br/>
                  Apellido (s): &nbsp&nbsp<input type="text" id = "apellido"> <br/><br/>
                  E-mail:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id = "correo"> <br/><br/>
-                 ContraseÃ±a: &nbsp <input type="password" id = "pass"> <br/><br/>
+                 Contraseña: &nbsp <input type="password" id = "pass"> <br/><br/>
                  Confirmar:&nbsp&nbsp&nbsp&nbsp&nbsp <input type="password" id = "conpass"> <br/><br/>
-                 <span id="Fuera"><input type="submit" value="Registrar"><span>&nbsp&nbsp&nbsp</span><button id="limpiar">Limpiar</button> </span><br><br>
+                 <span id="Fuera"><input type="submit" value="Registrar"><span>&nbsp&nbsp&nbsp</span><button type="reset" id="limpiar">Limpiar</button> </span><br><br>
                 </div>
             </form>
         </div>

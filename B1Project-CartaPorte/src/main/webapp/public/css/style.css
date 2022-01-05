@@ -1,0 +1,42 @@
+#Fuera {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #Dentro {
+    text-align: center;
+  }
+  #banner {
+    height: 68px;
+    color:#2727BE;
+    font-weight: 300;
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:3px;
+}
+#account{
+    position: relative;
+    height: 20px;
+    left: 20px;
+    margin:30px 0px 20px 80px;
+    font-size: 18px;
+}
+ 
+html{
+    font-family: Arial;
+}
+#logo-wrapper{
+    height: 370px;
+    width: 500px;
+}
+input:hover{
+    background-color: #2727BE;
+}
+
+button:hover{
+    background-color: #2727BE;
+}
