@@ -1,17 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: yeder
-  Date: 03/01/2022
-  Time: 05:30 p. m.
-  To change this template use File | Settings | File Templates.
+<%-- 
+    Document   : password
+    Created on : 4 ene 2022, 12:13:04
+    Author     : guapo_mfkjs57
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/css/Login.css">
+    <link rel="stylesheet" href="css/Login.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
@@ -24,15 +24,13 @@
         <div id="sign-in-wrapper">
             <div id="logo-wrapper">
                 <div id="logo">
-                    <img src="${pageContext.request.contextPath}/public/image/TierraAereo.png" width="200"
+                    <img src="image/TierraAereo.png" width="200"
                     height="150"></img>
                 </div>
                 <div id='banner'>
-                    Carta porte 
+                    Nueva contraseña
                 </div>
-                <div id="account">
-                    ¿No tienes una cuenta? <a href="signup.html">Regristrate</a>
-                </div>
+               
             </div>
             <div id="inputs-wrapper">
                 <form id="login"></form>
@@ -49,34 +47,46 @@
                     cols:1,
                     gutter:5
                 },
-                buttonsTemplate: "<a href='index.html' class='k-button'>Sign in</a>",
+                buttonsTemplate: "<a href='index.html' class='k-button'>Cambiar</a>",
                 formData:{
                     Email:"",
                     Password:"",
-                    RememberMe:false
                 },
                 
                 items: [
                     {
-                        field: "Email",
+                        field: "password",
                         label:"",
                         attributes:{
-                            placeholder: "Email",
+                            type:"password",
+                            placeholder: "Nueva contraseña",
+                            required:true
+                            
+                        }
+                    }, 
+                    {
+                        field: "Password",
+                        label:"",
+                        attributes:{
+                            type:"password",
+                            placeholder:"Confirmar contraseña",
                             required:true
                         }
-                    }
+                    },
+                   
                 ]
-            }),
+                
+            })
             $("#Password").parent().append("<span class='k-icon k-i-preview'></span>");
             $(".k-i-preview").mousedown(function(){
 
                 $("#Password").attr("type", "text");
-            }),
+            })
             $(".k-i-preview").mouseup(function(){
 
                 $("#Password").attr("type", "password");
-            }) ,          
-        }),
+            })           
+        })
     </script>
 </body>
 </html>
