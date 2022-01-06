@@ -1,3 +1,5 @@
+Use master
+
 create database Complemento_Carta_Porte;
 
 use Complemento_Carta_Porte;
@@ -154,7 +156,7 @@ create table Derechos_De_Paso(
 	Id_derechos_paso int primary Key not null identity(1,1),
 	KilometrajePagado decimal not null,
 -- Llave foranea
-	id_Transporte_Ferroviado int not null
+	id_Transporte_Ferroviario int not null
 );
 
 create table Contenedores(
@@ -310,3 +312,109 @@ ALTER TABLE Carros
 	ADD FOREIGN KEY(id_Transporte_Ferroviario)
 	REFERENCES Transportes_Ferroviarios(id_Transporte_Ferroviario)
 	ON UPDATE CASCADE;
+
+ALTER TABLE Ubicaciones
+	ADD FOREIGN KEY(Id_Ubicaciones_Totales)
+	REFERENCES Ubicaciones_Totales(Id_Ubicaciones_Totales)
+	ON UPDATE CASCADE;
+
+ALTER TABLE Domicilios
+	ADD FOREIGN KEY(id_ubicaciones)
+	REFERENCES Ubicaciones(id_ubicaciones)
+	ON UPDATE CASCADE;
+
+ALTER TABLE Domicilios
+	ADD FOREIGN KEY(Id_Tipo_Figura)
+	REFERENCES Tipos_Figura(Id_Tipo_Figura)
+	ON UPDATE CASCADE;
+
+ALTER TABLE Partes_Transporte
+	ADD FOREIGN KEY(Id_Tipo_Figura)
+	REFERENCES Tipos_Figura(Id_Tipo_Figura)
+	ON UPDATE CASCADE;
+
+ALTER TABLE Tipos_Figura
+	ADD FOREIGN KEY(Id_Figura_Transporte)
+	REFERENCES Figuras_Transporte(Id_Figura_Transporte)
+	ON UPDATE CASCADE;
+
+ALTER TABLE Ubicaciones_Totales
+	ADD FOREIGN KEY(Id_Carta_Porte)
+	REFERENCES cartas_porte(Id_Carta_Porte)
+	ON UPDATE CASCADE;
+	
+ALTER TABLE Transportes_Maritimos
+	ADD FOREIGN KEY(Id_total_mercancias)
+	REFERENCES totales_mercancias(Id_total_mercancias)
+	ON UPDATE CASCADE;
+
+ALTER TABLE Contenedores
+	ADD FOREIGN KEY(Id_transporte_maritimo)
+	REFERENCES Transportes_Maritimos(Id_transporte_maritimo)
+	ON UPDATE CASCADE;
+
+ALTER TABLE Derechos_De_Paso
+	ADD FOREIGN KEY(Id_transporte_ferroviario)
+	REFERENCES Transportes_Ferroviarios(Id_transporte_ferroviario)
+	ON UPDATE CASCADE;	
+
+ALTER TABLE Transportes_Ferroviarios
+	ADD FOREIGN KEY(Id_total_mercancias)
+	REFERENCES totales_mercancias(Id_total_mercancias)
+	ON UPDATE CASCADE;	
+
+ALTER TABLE Transportes_Aereos
+	ADD FOREIGN KEY(Id_total_mercancias)
+	REFERENCES totales_mercancias(Id_total_mercancias)
+	ON UPDATE CASCADE;	
+
+ALTER TABLE Totales_Mercancias
+	ADD FOREIGN KEY(Id_Carta_Porte)
+	REFERENCES cartas_porte(Id_Carta_Porte)
+	ON UPDATE CASCADE;	
+	
+ALTER TABLE Remolques
+	ADD FOREIGN KEY(id_Auto_Transporte)
+	REFERENCES Autos_Transporte(id_Auto_Transporte)
+	ON UPDATE CASCADE;	
+
+ALTER TABLE Seguros
+	ADD FOREIGN KEY(id_Auto_Transporte)
+	REFERENCES Autos_Transporte(id_Auto_Transporte)
+	ON UPDATE CASCADE;	
+
+ALTER TABLE Identificaciones_Vehiculares
+	ADD FOREIGN KEY(id_Auto_Transporte)
+	REFERENCES Autos_Transporte(id_Auto_Transporte)
+	ON UPDATE CASCADE;	
+	
+ALTER TABLE Autos_Transporte
+	ADD FOREIGN KEY(Id_total_mercancias)
+	REFERENCES totales_mercancias(Id_total_mercancias)
+	ON UPDATE CASCADE;	
+
+ALTER TABLE Detalles_Mercancias
+	ADD FOREIGN KEY(id_mercancias)
+	REFERENCES Mercancias(id_mercancias)
+	ON UPDATE CASCADE;	
+
+ALTER TABLE Pedimentos
+	ADD FOREIGN KEY(id_mercancias)
+	REFERENCES Mercancias(id_mercancias)
+	ON UPDATE CASCADE;	
+
+ALTER TABLE Guias_De_Identificacion
+	ADD FOREIGN KEY(id_mercancias)
+	REFERENCES Mercancias(id_mercancias)
+	ON UPDATE CASCADE;	
+
+ALTER TABLE Cantidades_Transporta
+	ADD FOREIGN KEY(id_mercancias)
+	REFERENCES Mercancias(id_mercancias)
+	ON UPDATE CASCADE;	
+	
+ALTER TABLE Mercancias
+	ADD FOREIGN KEY(Id_total_mercancias)
+	REFERENCES totales_mercancias(Id_total_mercancias)
+	ON UPDATE CASCADE;
+
